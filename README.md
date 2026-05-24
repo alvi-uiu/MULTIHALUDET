@@ -4,7 +4,7 @@
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
 
-[MeLLM @ ACL 2026] **MultiHaluDet** is a novel four-stage framework designed to detect multilingual hallucinations by probing the internal hidden state trajectories of frozen Large Language Models (LLMs). Unlike confidence-based heuristics, MultiHaluDet captures the "reasoning process" by analyzing distributional activation patterns across transformer layers.
+**MultiHaluDet** is a novel four-stage framework designed to detect multilingual hallucinations by probing the internal hidden state trajectories of frozen Large Language Models (LLMs). Unlike confidence-based heuristics, MultiHaluDet captures the "reasoning process" by analyzing distributional activation patterns across transformer layers.
 
 ## Key Framework Stages
 1. **Dynamic Layer Probing:** Uniformly samples hidden states from any LLM architecture (Mistral, LLaMA).
