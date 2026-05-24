@@ -66,7 +66,7 @@ src/
 │   └── meta_learner.py    # Log-Odds Logistic Meta-Regressor
 └── utils/
     ├── metrics.py         # Calibration & Evaluation (ECE, AUROC, Brier)
-    └── visualization.py   # Publication-ready plots
+    └── visualization.py   # Plots
 ```
 
 ## Citation
