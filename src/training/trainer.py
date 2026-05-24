@@ -6,7 +6,7 @@ import numpy as np
 import copy
 import random
 from src.data.feature_extractor import HybridDataset
-from src.models.multihaludet import HybridDeepLAP
+from src.models.multihaludet import MultiHaluDet
 from src.models.losses import FocalLoss, AsymmetricLoss, ContrastiveLoss
 from src.training.augmentations import mixup_data, cutmix_data
 from sklearn.metrics import roc_auc_score
@@ -56,7 +56,7 @@ def train_deep_model_fold(X_seq_tr, X_glob_tr, y_tr, X_seq_val, X_glob_val, y_va
     train_loader = DataLoader(train_ds, batch_size=config.batch_size, shuffle=True)
     val_loader = DataLoader(val_ds, batch_size=config.batch_size)
     
-    model = HybridDeepLAP(
+    model = MultiHaluDet(
         seq_dim=X_seq_tr.shape[2],
         global_dim=X_glob_tr.shape[1],
         hidden_dim=config.hidden_dim,

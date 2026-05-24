@@ -1,22 +1,11 @@
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from sklearn.model_selection import StratifiedKFold
 from scipy.special import expit, logit
-
-try:
-    import xgboost as xgb
-    HAS_XGB = True
-except ImportError:
-    HAS_XGB = False
-
-try:
-    import lightgbm as lgb
-    HAS_LGB = True
-except ImportError:
-    HAS_LGB = False
+import xgboost as xgb
+import lightgbm as lgb
 
 class LogOddsStacker:
     def __init__(self, seed):
@@ -29,13 +18,10 @@ class LogOddsStacker:
             ('rf', RandomForestClassifier(n_estimators=450, max_depth=17, class_weight='balanced', random_state=self.seed)),
             ('gbc', GradientBoostingClassifier(n_estimators=250, learning_rate=0.02, max_depth=6, random_state=self.seed)),
             ('lr', LogisticRegression(C=0.25, class_weight='balanced', random_state=self.seed, max_iter=3000)),
-            ('mlp', MLPClassifier(hidden_layer_sizes=(224, 112), activation='relu', random_state=self.seed, early_stopping=True)),
-            ('svm', SVC(C=2.5, kernel='rbf', class_weight='balanced', probability=True, random_state=self.seed))
+            ('svm', SVC(C=2.5, kernel='rbf', class_weight='balanced', probability=True, random_state=self.seed)),
+            ('xgb', xgb.XGBClassifier(n_estimators=400, learning_rate=0.008, random_state=self.seed, eval_metric='auc')),
+            ('lgb', lgb.LGBMClassifier(n_estimators=400, learning_rate=0.008, class_weight='balanced', random_state=self.seed, verbose=-1))
         ]
-        if HAS_XGB:
-            clfs.append(('xgb', xgb.XGBClassifier(n_estimators=400, learning_rate=0.008, random_state=self.seed, eval_metric='auc')))
-        if HAS_LGB:
-            clfs.append(('lgb', lgb.LGBMClassifier(n_estimators=400, learning_rate=0.008, class_weight='balanced', random_state=self.seed, verbose=-1)))
         return clfs
 
     def fit(self, X, y):

@@ -50,8 +50,6 @@ class Config:
 MODEL_REGISTRY = {
     "mistral-7b" : "mistralai/Mistral-7B-Instruct-v0.2",
     "llama2-7b"  : "meta-llama/Llama-2-7b-hf",
-    "qwen-3b"    : "Qwen/Qwen2.5-3B-Instruct",
-    "qwen-7b"    : "Qwen/Qwen2.5-7B-Instruct",
 }
 
 def get_config():

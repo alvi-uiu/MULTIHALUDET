@@ -53,7 +53,7 @@ class SelfAttentionPooling(nn.Module):
         pooled = torch.sum(x * attn_weights, dim=1)
         return pooled, attn_weights
 
-class HybridDeepLAP(nn.Module):
+class MultiHaluDet(nn.Module):
     def __init__(self, seq_dim, global_dim, hidden_dim, num_heads, num_layers, num_llm_layers, scales, dropout=0.3):
         super().__init__()
         

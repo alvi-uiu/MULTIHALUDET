@@ -7,5 +7,4 @@ transformers
 tqdm
 xgboost
 lightgbm
-imbalanced-learn
 scipy
