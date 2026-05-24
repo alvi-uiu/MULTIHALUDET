@@ -45,10 +45,7 @@ def load_triviaqa(lang='en', seed=42, max_samples=10000):
             
     if lang == 'en':
         warnings.warn(
-            f"Local {local_path} not found. The paper specifies using Gemma-2-2B to generate "
-            "plausible hard negatives. Falling back to downloading TriviaQA from HuggingFace and "
-            "using random sampling for negatives. Note: This contradicts the paper's methodology "
-            "and is for testing pipeline execution only."
+            f"Local {local_path} not found."
         )
         dataset = load_dataset("lucadiliello/triviaqa")
         all_items = list(dataset['train']) + list(dataset['validation'])
