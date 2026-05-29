@@ -72,10 +72,10 @@ src/
 ## Citation
 If you find this code or methodology useful, please cite our paper:
 ```bibtex
-@inproceedings{multihaludet2026,
+@article{alvi2026multihaludet,
   title={MultiHaluDet: Multilingual Hallucination Detection via LLM Hidden State Probing},
-  author={First Author and Second Author},
-  booktitle={ACL},
+  author={Alvi, Riasad and Sayeedi, Nurul Labib and Sayeedi, Md Faiyaz Abdullah},
+  journal={arXiv preprint arXiv:2605.24919},
   year={2026}
 }
 ```
