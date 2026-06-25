@@ -16,6 +16,7 @@ venv/
 # Data and Artifacts
 results/
 *.png
+!figures/*.png
 *.pdf
 *.log
 github.txt
