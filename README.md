@@ -12,6 +12,10 @@
 3. **Out-of-Fold Feature Generation:** Produces unbiased deep embeddings via K-fold stacking to prevent data leakage.
 4. **Log-Odds Ensemble Meta-Learning:** A learned logistic meta-regressor that weighs base classifiers (XGBoost, RF, SVM, etc.) in the log-odds space for robust, calibrated detection.
 
+## Architecture
+
+![MultiHaluDet Framework](figures/architecture.png)
+
 ## Performance Summary
 | Dataset | Base Model | AUROC (%) |
 | :--- | :--- | :---: |
