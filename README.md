@@ -1,6 +1,7 @@
 # MultiHaluDet: Multilingual Hallucination Detection via LLM Hidden State Probing
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2605.24919)
+[![Paper](https://img.shields.io/badge/Paper-ACL_Anthology-red)](https://aclanthology.org/2026.mellm-1.6/)
+[![Poster](https://img.shields.io/badge/Poster-PDF-blueviolet)](MultiHaluDet_Poster.pdf)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
 
@@ -76,10 +77,10 @@ src/
 ## Citation
 If you find this code or methodology useful, please cite our paper:
 ```bibtex
-@article{alvi2026multihaludet,
+@inproceedings{alvi2026multihaludet,
   title={MultiHaluDet: Multilingual Hallucination Detection via LLM Hidden State Probing},
   author={Alvi, Riasad and Sayeedi, Nurul Labib and Sayeedi, Md Faiyaz Abdullah},
-  journal={arXiv preprint arXiv:2605.24919},
-  year={2026}
+  year={2026},
+  url={https://aclanthology.org/2026.mellm-1.6/}
 }
 ```
