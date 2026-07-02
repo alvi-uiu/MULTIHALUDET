@@ -77,10 +77,23 @@ src/
 ## Citation
 If you find this code or methodology useful, please cite our paper:
 ```bibtex
-@inproceedings{alvi2026multihaludet,
-  title={MultiHaluDet: Multilingual Hallucination Detection via LLM Hidden State Probing},
-  author={Alvi, Riasad and Sayeedi, Nurul Labib and Sayeedi, Md Faiyaz Abdullah},
-  year={2026},
-  url={https://aclanthology.org/2026.mellm-1.6/}
+@inproceedings{alvi-etal-2026-multihaludet,
+    title = "{M}ulti{H}alu{D}et: Multilingual Hallucination Detection via {LLM} Hidden State Probing",
+    author = "Alvi, Riasad  and
+      Sayeedi, Nurul Labib  and
+      Sayeedi, Md. Faiyaz Abdullah",
+    editor = "Huang, Kaiyu  and
+      Mo, Fengran  and
+      Chen, Pinzhen  and
+      Jiang, Meng",
+    booktitle = "Proceedings of the 1st Workshop on Multilinguality in the Era of Large Language Models ({M}e{LLM} 2026)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.mellm-1.6/",
+    doi = "10.18653/v1/2026.mellm-1.6",
+    pages = "63--74",
+    ISBN = "979-8-89176-430-9"
 }
 ```
